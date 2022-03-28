@@ -1,7 +1,7 @@
 import React from 'react';
 import { Formik, ErrorMessage, Field } from 'formik';
 import * as Yup from 'yup';
-import { authContext } from './AuthProvider';
+import { authContext } from '../components/AuthProvider';
 import { useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
