@@ -2,7 +2,7 @@ import React from 'react';
 import { Formik, ErrorMessage, Field } from 'formik';
 import * as Yup from 'yup';
 import { authContext } from '../components/AuthProvider';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 
 const LoginSchema = Yup.object().shape({
@@ -62,6 +62,7 @@ const LoginPage = () => {
           <ErrorMessage name="password" className="error" component="span" />
           <br/><br/>
           <input type="submit" value="Login" disabled={isSubmitting}/>
+          <Link to="/register">Register</Link>
         </form>
       )}
     </Formik>
