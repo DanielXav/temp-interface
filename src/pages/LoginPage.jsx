@@ -16,14 +16,19 @@ const LoginPage = () => {
   let navigate = useNavigate();
   let location = useLocation();
 
-  let from = location.state?.from || "/";
+  let from = "/";
 
   const handleSubmitting = (values, { setSubmitting, setStatus }) => {
     setStatus({ isValidating: true });
-    login().then(navigate(from, { replace: true }));
     axios
       .post("https://fast-badlands-00990.herokuapp.com/api/v1/login", values)
-      .then((resp) => console.log(resp));
+      .then(resp => {
+        const { status } = resp
+        if (status == 200){
+          // localStorage.setItem('app-token')
+          login().then(navigate(from, { replace: true }));
+        }
+      });
     // setTimeout(() => {
     //   // let email = values.email
     //   // let senha = values.senha
