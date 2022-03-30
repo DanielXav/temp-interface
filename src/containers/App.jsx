@@ -7,7 +7,6 @@ import Navbar from "../components/Navbar";
 import NotFound from "../components/NotFound";
 import PrivateOutlet from "../components/PrivateOutlet";
 import PrivateRoute from "../PrivateRoute";
-import Search from "../pages/Search";
 import RegisterPage from "../pages/RegisterPage";
 import RegisterProject from "../pages/RegisterProject";
 import ListProjects from "../pages/ListProjects";
@@ -36,7 +35,6 @@ const App = () => (
                 <Route element={<PrivateOutlet />}>
                     <Route path="/about" element={<About />}></Route>
                     <Route path="/" element={<HomePage />}></Route>
-                    <Route path="/search" element={<Search />} />
                     <Route path="/regist-project" element={<RegisterProject />} />
                     <Route path="/list-projects" element={<ListProjects />} />
                     <Route path="/link-alumn" element={<LinkAlumn />} />
