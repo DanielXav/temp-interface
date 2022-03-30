@@ -31,7 +31,7 @@ const RegisterPage = () => {
         //     setSubmitting(false); // iremos fazer modificações aqui
         //     setStatus({ isValidating: false });
         // }, 400);
-        // alert(JSON.stringify(values));
+        //alert(JSON.stringify(values));
     };
 
     const navigate = useNavigate();
@@ -112,6 +112,7 @@ const RegisterPage = () => {
                     <ErrorMessage name="function" className="error" component="span" />
 
                     <input type="submit" value="Register" disabled={isSubmitting} onClick={handleRegister} />
+                    
                     
                 </form>
             )}

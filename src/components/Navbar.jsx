@@ -24,6 +24,15 @@ const Navbar = () => {
           <li>
             <Link to="/search">Search</Link>
           </li>
+          <li>
+            <Link to="/regist-project">Regist Project</Link>
+          </li>
+          <li>
+            <Link to="/list-projects">List Projects</Link>
+          </li>
+          <li>
+            <Link to="/link-alumn">Link Alumn</Link>
+          </li>
         </ul>
         {authed && <button onClick={handleLogout}>Logout</button>}
       </nav>
