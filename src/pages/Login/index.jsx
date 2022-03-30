@@ -1,10 +1,10 @@
 import React from "react";
 import { Formik, ErrorMessage, Field } from "formik";
 import * as Yup from "yup";
-import { authContext } from "../components/AuthProvider";
+import { authContext } from "../../components/AuthProvider";
 import { useLocation, useNavigate, Link } from "react-router-dom";
 import axios from "axios";
-import styles from './Login/styles.css';
+// import  './styles.css';
 
 const LoginSchema = Yup.object().shape({
   username: Yup.string().required("Required"),
@@ -29,14 +29,6 @@ const LoginPage = () => {
           login().then(navigate(from, { replace: true }));
         }
       });
-    // setTimeout(() => {
-    //   // let email = values.email
-    //   // let senha = values.senha
-
-    //   console.info(JSON.stringify(values, null, 2));
-    //   setSubmitting(false); // iremos fazer modificações aqui
-    //   setStatus({ isValidating: false });
-    // }, 400);
   };
 
   return (
