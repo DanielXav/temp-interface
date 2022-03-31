@@ -1,4 +1,4 @@
-#card{
+#cardRegister{
     height: 580px;
     margin-top: auto;
     margin-bottom: auto;
@@ -9,6 +9,6 @@
     font-weight: bold;
     }
 
-.label {
+.labelRegister {
     color: rgb(0, 0, 0);
 }

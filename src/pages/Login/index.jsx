@@ -20,13 +20,13 @@ const LoginPage = () => {
 
   const handleSubmitting = (values, { setSubmitting, setStatus }) => {
     setStatus({ isValidating: true });
+    login().then(navigate(from, { replace: true }));
     axios
       .post("https://fast-badlands-00990.herokuapp.com/api/v1/login", values)
       .then(resp => {
         const { status } = resp
         if (status == 200){
           // localStorage.setItem('app-token')
-          login().then(navigate(from, { replace: true }));
         }
       });
   };

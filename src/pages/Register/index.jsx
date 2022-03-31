@@ -61,7 +61,7 @@ const RegisterPage = () => {
       onSubmit={handleSubmitting}
     >
       {({ handleChange, handleBlur, handleSubmit, isSubmitting }) => (
-        <div class="container" id="card">
+        <div class="container" id="cardRegister">
           <form onSubmit={handleSubmit}>
             <div class="form-group">
               <label>Username</label>
@@ -130,7 +130,7 @@ const RegisterPage = () => {
             </div>
             <div class="form-group">
               <label>Function</label>
-              <div className="label">
+              <div className="labelRegister">
                 <SelectInput name="function">
                   {optionsFunctions.map((option) => (
                     <option key={option.value} value={option.value}>
@@ -156,7 +156,7 @@ const RegisterPage = () => {
           </form>
           <div class="card-footer">
             <div class="d-flex justify-content-center links">
-              Don't have an account?<Link to="/login">Sign up</Link>
+              Already have an account?<Link to="/login">Sign In</Link>
             </div>
           </div>
         </div>
