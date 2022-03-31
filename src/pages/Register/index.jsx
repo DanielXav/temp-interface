@@ -23,7 +23,7 @@ const RegisterPage = () => {
   const handleSubmitting = (values, { setSubmitting, setStatus }) => {
     setStatus({ isValidating: true });
     axios
-      .post("https://fast-badlands-00990.herokuapp.com/api/v1/signup", values)
+      .post("https://immense-sands-97611.herokuapp.com/api/v1/signup", values)
       .then((resp) => console.log(resp));
   };
 

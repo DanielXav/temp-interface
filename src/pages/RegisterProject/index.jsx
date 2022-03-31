@@ -14,7 +14,7 @@ const RegisterProject = () => {
   const handleSubmitting = (values, { setSubmitting, setStatus }) => {
     setStatus({ isValidating: true });
     axios
-      .post("https://fast-badlands-00990.herokuapp.com/api/v1/projects", values)
+      .post("https://immense-sands-97611.herokuapp.com/api/v1/projects?credentials=%7B%7D&details=%7B%7D&principal=%7B%7D", values)
       .then((resp) => console.log(resp.data));
   };
 

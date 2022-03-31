@@ -20,13 +20,16 @@ const LoginPage = () => {
 
   const handleSubmitting = (values, { setSubmitting, setStatus }) => {
     setStatus({ isValidating: true });
-    login().then(navigate(from, { replace: true }));
     axios
-      .post("https://fast-badlands-00990.herokuapp.com/api/v1/login", values)
-      .then(resp => {
+    .post("https://immense-sands-97611.herokuapp.com/api/v1/login", values)
+    .then(resp => {
+      console.log(resp)
+        const { token } = resp.data
         const { status } = resp
+        localStorage.setItem('token', JSON.stringify(token));
+        axios.defaults.headers.common['Authorization'] = token
         if (status == 200){
-          // localStorage.setItem('app-token')
+          login().then(navigate(from, { replace: true }));
         }
       });
   };

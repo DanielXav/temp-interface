@@ -16,7 +16,7 @@ const LinkAlumn = () => {
     setStatus({ isValidating: true });
     axios
       .post(
-        "https://fast-badlands-00990.herokuapp.com/api/v1/projects/link",
+        "https://immense-sands-97611.herokuapp.com/api/v1/projects/link?credentials=%7B%7D&details=%7B%7D&principal=%7B%7D",
         values
       )
       .then((resp) => console.log(resp.data));

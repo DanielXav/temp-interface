@@ -7,7 +7,7 @@ export default class ListProjects extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('https://fast-badlands-00990.herokuapp.com/api/v1/projects')
+    axios.get('https://immense-sands-97611.herokuapp.com/api/v1/projects')
       .then(res => {
         const tarefas = res.data
         console.log(res.data)
