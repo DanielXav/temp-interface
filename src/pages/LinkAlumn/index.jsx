@@ -19,7 +19,7 @@ const LinkAlumn = () => {
         "https://immense-sands-97611.herokuapp.com/api/v1/projects/link?credentials=%7B%7D&details=%7B%7D&principal=%7B%7D",
         values
       )
-      .then((resp) => console.log(resp.data));
+      .then((resp) => console.log(resp));
   };
 
   const optionsFunctions = [
@@ -37,7 +37,7 @@ const LinkAlumn = () => {
       onSubmit={handleSubmitting}
     >
       {({ handleChange, handleBlur, handleSubmit, isSubmitting }) => (
-        <div class="container" id="cardLinkAlumn">
+        <div class="container margin" id="cardLinkAlumn">
           <form onSubmit={handleSubmit}>
             <div class="form-group ">
               <label>Function</label>

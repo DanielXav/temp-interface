@@ -1,6 +1,8 @@
 import React from 'react'
 import axios from 'axios'
 
+import  './styles.css';
+
 export default class ListProjects extends React.Component {
   state = {
     tarefas: []
@@ -18,7 +20,7 @@ export default class ListProjects extends React.Component {
   render() {
     return (
         <>
-        <h1>Lista dos Projetos</h1>
+        <h1 align="center" className="margin">Lista dos Projetos</h1>
         <table className="table">
             <tr className="thead-dark">
                 <td scope="col">Users</td>

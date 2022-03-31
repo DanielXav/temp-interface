@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import "./styles.css";
+
 const HomePage = () => (
-  <div className="container">
+  <div className="container margin">
     <div class="card-deck">
       <div class="card">
         <div class="card-body">
