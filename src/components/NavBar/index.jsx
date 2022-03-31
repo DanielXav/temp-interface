@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { authContext } from '../AuthProvider';
 import './styles.css'
+import Img from '../Img/logo.png'
 
 const Navbar = () => {
   const { authed, logout } = React.useContext(authContext);
@@ -13,8 +14,13 @@ const Navbar = () => {
   };
 
   return (
-    <div>
-      <nav>
+    <header class="cabecalho">
+      <div class="logo">
+        <a href="#inicio">
+          <img src={Img} alt="Logo" />
+        </a>
+      </div>
+      <nav class="menu">
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -32,9 +38,13 @@ const Navbar = () => {
             <Link to="/about">About</Link>
           </li>
         </ul>
-        {authed && <button onClick={handleLogout}>Logout</button>}
+        
       </nav>
-    </div>
+      <aside class="autenticacao">
+        {authed && <button onClick={handleLogout} class="botao destaque">Logout</button>}
+      </aside>
+    </header>
+
   );
 }
 

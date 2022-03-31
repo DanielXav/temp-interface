@@ -19,11 +19,11 @@ export default class ListProjects extends React.Component {
     return (
         <>
         <h1>Lista dos Projetos</h1>
-        <table border="1">
-            <tr>
-                <td>Users</td>
-                <td>Name</td>
-                <td>Description</td>
+        <table className="table">
+            <tr className="thead-dark">
+                <td scope="col">Users</td>
+                <td scope="col">Name</td>
+                <td scope="col">Description</td>
             </tr>
             { this.state.tarefas.map(tarefa => 
             <tr>    
