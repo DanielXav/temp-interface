@@ -1,3 +1,5 @@
+import './styles.css'
+
 const About = () => (
     <div className="About">
         <h1>About Page</h1>

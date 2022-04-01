@@ -3,11 +3,11 @@ import "./styles.css";
 
 const HomePage = () => (
   <div className="container margin">
-    <div class="card-deck">
+    <div class="card-deck fonts">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Regist Project</h5>
-          <p class="card-text">Copisa 1</p>
+          <h5 class="card-title bold">Regist Project</h5>
+          <p class="card-text">Registra seus projetos!</p>
         </div>
         <div class="card-footer">
           <Link to="/regist-project">
@@ -17,8 +17,8 @@ const HomePage = () => (
       </div>
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">List Projects</h5>
-          <p class="card-text">Copisa 2</p>
+          <h5 class="card-title bold">List Projects</h5>
+          <p class="card-text">Listagem de todos os projetos cadastrados!</p>
         </div>
         <div class="card-footer">
           <Link to="/list-projects">
@@ -28,8 +28,8 @@ const HomePage = () => (
       </div>
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Link Alumn</h5>
-          <p class="card-text">Copisa 3</p>
+          <h5 class="card-title bold">Link Alumn</h5>
+          <p class="card-text">Linka alunos para o projeto!</p>
         </div>
         <div class="card-footer">
           <Link to="/link-alumn">

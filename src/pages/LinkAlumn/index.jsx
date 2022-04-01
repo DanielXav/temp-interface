@@ -3,7 +3,7 @@ import { Formik, ErrorMessage, Field } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import SelectInput from "../../components/SelectInput";
-import "./styles.css";
+import "./stylesLinkAlumn.css";
 
 const LinkSchema = Yup.object().shape({
   function: Yup.string().required("Required"),
@@ -37,9 +37,9 @@ const LinkAlumn = () => {
       onSubmit={handleSubmitting}
     >
       {({ handleChange, handleBlur, handleSubmit, isSubmitting }) => (
-        <div class="container margin" id="cardLinkAlumn">
+        <div class="container" id="cardLinkAlumn">
           <form onSubmit={handleSubmit}>
-            <div class="form-group ">
+            <div class="form-group margin">
               <label>Function</label>
               <div class="labelProjectId">
                 <SelectInput name="function">
@@ -77,7 +77,7 @@ const LinkAlumn = () => {
             </div>
 
             <div class="form-group">
-              <label>Project Id*</label>
+              <label>Username*</label>
 
               <Field
                 placeholder="Your username"

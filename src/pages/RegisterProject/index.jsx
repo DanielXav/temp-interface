@@ -25,9 +25,9 @@ const RegisterProject = () => {
       onSubmit={handleSubmitting}
     >
       {({ handleChange, handleBlur, handleSubmit, isSubmitting }) => (
-        <div className="container margin" id="cardRegisterProject">
+        <div className="container" id="cardRegisterProject">
           <form onSubmit={handleSubmit}>
-            <div class="form-group">
+            <div class="form-group margin">
               <label>Description</label>
               <Field
                 placeholder="Your project description"
