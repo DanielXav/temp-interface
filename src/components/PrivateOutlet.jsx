@@ -6,7 +6,7 @@ const PrivateOutlet = () => {
     const { authed } = React.useContext(authContext);
     const location = useLocation();
 
-    return authed ? <Outlet /> : <Navigate to="/login" replace state={{ from: location }}/>;
+    return authed ? <Outlet /> : <Navigate to="/login" replace state={{ from: location }} />;
 }
 
 export default PrivateOutlet;

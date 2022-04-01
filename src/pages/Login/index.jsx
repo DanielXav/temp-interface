@@ -4,7 +4,7 @@ import * as Yup from "yup";
 import { authContext } from "../../components/AuthProvider";
 import { useLocation, useNavigate, Link } from "react-router-dom";
 import axios from "axios";
-import  './styles.css';
+import './styles.css';
 
 const LoginSchema = Yup.object().shape({
   username: Yup.string().required("Required"),
@@ -21,14 +21,14 @@ const LoginPage = () => {
   const handleSubmitting = (values, { setSubmitting, setStatus }) => {
     setStatus({ isValidating: true });
     axios
-    .post("https://immense-sands-97611.herokuapp.com/api/v1/login", values)
-    .then(resp => {
-      console.log(resp)
+      .post("https://immense-sands-97611.herokuapp.com/api/v1/login", values)
+      .then(resp => {
+        console.log(resp)
         const { token } = resp.data
         const { status } = resp
         localStorage.setItem('token', JSON.stringify(token));
         axios.defaults.headers.common['Authorization'] = token
-        if (status == 200){
+        if (status == 200) {
           login().then(navigate(from, { replace: true }));
         }
       })
@@ -109,14 +109,14 @@ const LoginPage = () => {
                   </div>
 
                 </form>
-                </div>
+              </div>
             )}
           </Formik>
           <div class="card-footer">
             <div class="d-flex justify-content-center links">
               Don't have an account?<Link to="/register">Sign up</Link>
             </div>
-            
+
 
           </div>
         </div>

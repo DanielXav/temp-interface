@@ -1,7 +1,7 @@
 import Routes from "../components/Routes"
 
 const App = () => (
-    <Routes/>
+    <Routes />
 );
 
 export default App;

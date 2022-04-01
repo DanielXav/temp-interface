@@ -38,7 +38,7 @@ const Navbar = () => {
             <Link to="/about">About</Link>
           </li>
         </ul>
-        
+
       </nav>
       <aside class="autenticacao">
         {authed && <button onClick={handleLogout} class="botao destaque">Logout</button>}

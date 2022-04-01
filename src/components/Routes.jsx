@@ -17,8 +17,8 @@ const Routess = () => (
         <AuthProvider>
             <Navbar />
             <Routes>
-                <Route path="/login" element={<LoginPage />}/>
-                <Route path="/register" element={<RegisterPage />}/>
+                <Route path="/login" element={<LoginPage />} />
+                <Route path="/register" element={<RegisterPage />} />
                 <Route element={<PrivateOutlet />}>
                     <Route path="/about" element={<About />}></Route>
                     <Route path="/" element={<HomePage />}></Route>
