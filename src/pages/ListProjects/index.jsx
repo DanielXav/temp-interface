@@ -5,15 +5,15 @@ import  './stylesListProjects.css';
 
 export default class ListProjects extends React.Component {
   state = {
-    tarefas: []
+    projetos: []
   }
 
   componentDidMount() {
     axios.get('https://immense-sands-97611.herokuapp.com/api/v1/projects')
       .then(res => {
-        const tarefas = res.data
+        const projetos = res.data
         console.log(res.data)
-        this.setState({ tarefas })
+        this.setState({ projetos })
       })
   }
 
@@ -28,12 +28,12 @@ export default class ListProjects extends React.Component {
                 <th scope="col">Name</th>
                 <th scope="col">Description</th>
             </tr>
-            { this.state.tarefas.map(tarefa => 
+            { this.state.projetos.map(projeto => 
             <tr className="bottom">    
-                <td  key={tarefa._id}>{tarefa.users[0].username}</td>
-                <td  key={tarefa._id}>{tarefa.users[0].function}</td>
-                <td  key={tarefa._id}>{tarefa.name}</td>
-                <td  key={tarefa._id}>{tarefa.description}</td>
+                <td  key={projeto._id}>{projeto.users[0].username}</td>
+                <td  key={projeto._id}>{projeto.users[0].function}</td>
+                <td  key={projeto._id}>{projeto.name}</td>
+                <td  key={projeto._id}>{projeto.description}</td>
             </tr>)}
         </table>
 
