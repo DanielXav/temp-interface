@@ -5,7 +5,7 @@ const About = () => (
     <div className="About container">
         <h1>About Page</h1>
         <hr />
-        <p>Projeto desenvolvido para o trabalho de Tecnologias de Interface Gráficas. UEPB - Prof. Ramon</p>
+        <p>Projeto desenvolvido para o trabalho de Tecnologias de Interfaces Gráficas. UEPB - Prof. Ramon</p>
         <p>
             Desenvolvidor por Daniel Xavier e Lucas de Lucena.
         </p>
