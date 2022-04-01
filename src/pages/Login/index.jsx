@@ -31,6 +31,9 @@ const LoginPage = () => {
         if (status == 200){
           login().then(navigate(from, { replace: true }));
         }
+      })
+      .catch(error => {
+        alert(error)
       });
   };
 
